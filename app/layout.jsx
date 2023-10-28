@@ -1,13 +1,11 @@
 import '@styles/globals.css';
-import { Html } from 'next/document';
-import { Children } from 'react';
 
 export const metadata = {
     title: "share promopt",
     description: 'Discover & Share AI prompt'
 }
 
-const layout = () => {
+const RootLayout = ({children}) => {
   return (
     <html lang='en'>
         <body>
@@ -16,11 +14,11 @@ const layout = () => {
             </div>
             
             <main className='app'>
-                {Children}
+                {children}
             </main>
         </body>
     </html>
   )
 }
 
-export default layout
+export default RootLayout;
